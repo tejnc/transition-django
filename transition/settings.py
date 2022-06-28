@@ -156,6 +156,7 @@ SPECTACULAR_SETTINGS = {
     # OTHER SETTINGS
 }
 
+# hook configuration
 HOOK_EVENTS = {
     "notification.added": "employee.Notification.created",
     # "notification.webhooknotify": "employee.Notification.created",

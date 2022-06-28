@@ -86,7 +86,7 @@ class EmployeeRegistrationAPIView(APIView):
                 "status": status.HTTP_500_INTERNAL_SERVER_ERROR,
                 "message": serializer.errors
             }
-            return resp
+            return Response(resp)
 
 
 class EmployeeListAPIView(APIView):

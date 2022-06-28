@@ -7,5 +7,6 @@ admin.site.register(
     Employee,
     EmergencyContact,
     Address,
+    Notification,
     ]
 )
