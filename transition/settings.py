@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     # 'drf_yasg',
     'drf_spectacular',
     'django_rest_webhooks',
+    # for social_auth
+    'corsheaders',
+    'social_auth', # custom app
 ]
 
 MIDDLEWARE = [
@@ -81,14 +84,18 @@ WSGI_APPLICATION = 'transition.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'postgres',
+    #     'USER': 'admin',
+    #     'PASSWORD':'admin',
+    #     'HOST':'localhost',
+    #     'PORT': '5432'
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'admin',
-        'PASSWORD':'admin',
-        'HOST':'localhost',
-        'PORT': '5432'
-    }
+            'ENGINE':'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
 }
 
 
@@ -145,7 +152,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30)
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=240)
 }
 
 SPECTACULAR_SETTINGS = {

@@ -1,2 +1,4 @@
 venv-transition
 __pycache__
+requirements.in
+.env

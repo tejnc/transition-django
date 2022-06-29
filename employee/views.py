@@ -128,7 +128,7 @@ class NotificationCreateAPIView(APIView):
 
 class WebhookReceivedAPIView(APIView):
 
-    @extend_schema(tags=["Test"])
+    # @extend_schema(tags=["Test"])
     def post(self, request):
         print("Data received from Webhook is", request.data["data"])
         return HttpResponse("Webhook received")
